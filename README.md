@@ -1,4 +1,4 @@
-# activerecord
+# Activerecord
 
 # Introduction to ActiveRecord
 
@@ -23,7 +23,7 @@ When we need to update the database, we need to write ruby code and then needs t
   ```
   
   
-  But in reality it calls the [model_generator.rb|https://github.com/rails/rails/blob/master/activerecord/lib/rails/generators/active_record/model/model_generator.rb#L18] and [migration_file|https://github.com/rails/rails/blob/master/activerecord/lib/rails/generators/active_record/migration/templates/create_table_migration.rb.tt]
+  But in reality it calls the [create_table_migration.rb](https://github.com/rails/rails/blob/master/activerecord/lib/rails/generators/active_record/model/model_generator.rb#L18) and [migration_file](https://github.com/rails/rails/blob/master/activerecord/lib/rails/generators/active_record/migration/templates/create_table_migration.rb.tt)
   that helps in creating the above files.
   
   Once the model and migrations are created we have to run:
@@ -42,4 +42,4 @@ When we need to update the database, we need to write ruby code and then needs t
   t.save
   ```
   
-  Now the data entered is saved to the database. This is equivalent to running the SQL query in the backend. Inside the abstract adapter [this method|https://github.com/rails/rails/blob/master/activerecord/lib/active_record/connection_adapters/abstract/database_statements.rb#L139] will run the Insert query and save to database.
+  Now the data entered is saved to the database. This is equivalent to running the SQL query in the backend. Inside the abstract adapter [this method](https://github.com/rails/rails/blob/master/activerecord/lib/active_record/connection_adapters/abstract/database_statements.rb#L139) will run the Insert query and save to database.
